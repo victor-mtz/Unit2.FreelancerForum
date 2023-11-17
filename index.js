@@ -33,6 +33,7 @@ function calculateAvgPrice() {
 }
 
 function render() {
+  clearTable();
   const availableFreelancerContainer = document.getElementById(
     'available-freelancers'
   );
@@ -91,6 +92,13 @@ function addFreelancer() {
 
   if (startingFreelanceArray.length >= maxFreelancers) {
     clearInterval(addFreelancerIndervalId);
+  }
+}
+
+function clearTable() {
+  freelancerTableContainer;
+  while (freelancerTableContainer.childNodes.length) {
+    freelancerTableContainer.removeChild(freelancerTableContainer.firstChild);
   }
 }
 
